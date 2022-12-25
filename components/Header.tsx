@@ -1,9 +1,9 @@
 
 function Header() {
   return (
-    <header className="w-1/4 h-full fixed bg-red-500">
-        <h3>Words On Paper</h3>
-        <nav className="categories">
+    <header className="h-full w-full bg-red-500">
+        <h3 className="text-2xl font-semibold">Words On Paper</h3>
+        <nav className="categories m-auto text-center mt-32">
             <ul>
                 <li><a>Category One</a></li>
                 <li><a>Category Two</a></li>
