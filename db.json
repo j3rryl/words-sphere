@@ -1,0 +1,22 @@
+{
+    "articles":[
+        {
+            "id":1,
+            "title":"Haunted by the passage of time.",
+            "author":"Delmar",
+            "words":"During the night all I crave for is silence. Something I can never have. Constantly haunted by the voices in my head. Robbed of sleep by my intrusive thoughts. It will be over in a second."            
+        },
+        {
+            "id":2,
+            "title":"When will it end?",
+            "author":"Delmar",
+            "words":"I’m having trouble breathing. Like the air around just feels heavy. I’d like to blame it on an illness but I’d be fooling myself. I feel like I am regressing, going back to where I was before."
+        },
+        {
+            "id":3,
+            "title":"Writing.",
+            "author":"Delmar",
+            "words":"I never thought I’d become a slave to writing but here I am. Surviving a day without jolting down something, anything, has become quite the uphill task."
+        }
+    ]
+}

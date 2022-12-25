@@ -1,5 +1,8 @@
+import { InferGetServerSidePropsType } from "next"
 import Header from "../components/Header"
-export default function Home() {
+import { Article } from "../models/Article"
+
+export default function Home({articles}:InferGetServerSidePropsType<typeof getServerSideProps>) {
   return (
     <div className="flex ">
       <div className="header w-1/4 h-screen">
@@ -7,14 +10,28 @@ export default function Home() {
       </div>
            
       <div className="content !w-3/4 px-10">
-        <article>
-          <h1>Title One</h1>
-        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ipsam libero saepe, labore praesentium sunt quod culpa sapiente nisi at, delectus tenetur obcaecati ullam cumque quos. 
-          Repudiandae quo commodi laboriosam cumque.
-        </p>
-        </article>
-        
+        {articles.map((article:Article)=>{
+          return(
+          <article key={article.id}>
+            <h3 className="font-medium text-2xl ml-16">{article.title}</h3>
+            <hr className="w-1/2" />
+            <p>
+              {article.words}
+            </p>
+            <p className=" text-right">{article.author}</p>
+          </article>
+          )
+        })}
       </div>
     </div>
   )
+}
+export async function getServerSideProps(){
+  const response = await fetch(`http://localhost:5000/articles`)
+  const data = await response.json()
+  return{
+    props:{
+      articles:data,
+    }
+  }
 }
