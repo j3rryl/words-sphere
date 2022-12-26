@@ -1,7 +1,7 @@
 import { InferGetServerSidePropsType } from "next"
 import Header from "../components/Header"
 import { Article } from "../models/Article"
-
+// streaks
 export default function Home({articles}:InferGetServerSidePropsType<typeof getServerSideProps>) {
   return (
     <div className="flex ">
